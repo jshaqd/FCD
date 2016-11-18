@@ -7,6 +7,7 @@ using FCD.Configuration;
 using FCD.MultiTenancy;
 using FCD.Users;
 using FCD.Web;
+using FCD.Invoices;
 
 namespace FCD.EntityFramework
 {
@@ -14,6 +15,11 @@ namespace FCD.EntityFramework
     public class FCDDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         /* Define an IDbSet for each entity of the application */
+
+        public IDbSet<InvoiceTemplate> InvoiceTemplates { get; set; }
+        public IDbSet<InvoiceTemplateField> InvoiceTemplateFields { get; set; }
+        public IDbSet<Invoice> Invoices { get; set; }
+        public IDbSet<InvoiceField> InvoiceFields { get; set; }
 
         /* Default constructor is needed for EF command line tool. */
         public FCDDbContext()

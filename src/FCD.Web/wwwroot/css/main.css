@@ -4,3 +4,6 @@
 .famfamfam-flags {
   display: inline-block;
 }
+.dataTables_wrapper {
+  padding-top: 5px;
+}
